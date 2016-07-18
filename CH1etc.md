@@ -26,7 +26,7 @@ Next up run Pear on all the uninterleaved files:
       do
         BASE=$(basename $i -1.fq)
         echo 'processing' $BASE
-        pear-0.9.6-bin-64 -f $BASE-1.fq -r $BASE-2.fq -o $BASE-pear
+        pear-0.9.6-bin-64 -d 40 -f $BASE-1.fq -r $BASE-2.fq -o $BASE-pear #Only pick Phred score of >40
         echo 'done'
       done
       
